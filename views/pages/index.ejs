@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // Accepts any class name
+        var rellax = new Rellax('.rellax');
+      </script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+</head>
+<body>
+    
+
+ <header class="hero" id="start">
+    <%- include('../partials/nav')%>
+ </header>
+
+
+<section class="bio rellax" data-rellax-speed="-10" data-scroll="in">
+ <%- include('../partials/bio')%>
+</section>
+
+<section class="redes rellax" id="redes" data-rellax-speed="-11">
+    <%- include('../partials/redes')%>
+</section>
+
+
+<section class="balloons rellax" data-rellax-speed="-4">
+  <%-include('../partials/balloons')%>
+</section>
+
+
+<section class="clouds rellax" data-rellax-speed="2">
+  <%-include('../partials/clouds')%>
+</section>
+
+
+<section class="clouds rellax" data-rellax-speed="3" data-rellax-percentage="-8">
+  <%-include('../partials/clouds')%>
+</section>
+
+<section style="margin-left:-15vw; margin-top: -300px;" class="clouds rellax" data-rellax-speed="4">
+  <%-include('../partials/clouds')%>
+</section>
+
+<section style="margin-left:-20vw; margin-top: -300px;" class="clouds rellax" data-rellax-speed="4">
+  <%-include('../partials/clouds')%>
+</section>
+
+
+<section class="myinfo rellax" id="myinfo" data-rellax-speed="10">
+  <%- include('../partials/myinfo')%>
+ </section>
+
+ <section class="footer">
+  <%- include('../partials/footer')%>
+ </section>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+<script>
+    // Accepts any class name
+    var rellax = new Rellax('.rellax', {horizontal: true, vertical: true});
+  </script>
+
+<script>
+  ScrollOut();
+</script>
