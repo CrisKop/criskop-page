@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="/css/index.css">
+    <script type="text/javascript" src="/js/script.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11/dist/gsap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A</title>
+</head>
+<body>
+    
+  <div class="bgblur"></div>
+
+    <section class="navegador">
+    <nav class="nav container" id="nav">
+        <h2 class="nav__logo" id="top">C</h2>
+    
+        <ul class="nav__links">
+    
+            <li class="nav__item">
+                <a href="#projects" class="nav__link">Projects</a>
+            </li>
+        
+        </ul>
+    
+        <a href="#nav" class="nav__hamburguer">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFrSURBVHhe7duxSQVBFEDRr4hgKIKBqV1YhSVpDWquuVZhCVqAiZnWsM6AU8Pe4Bx4/JdfGPi7O0fbth3oOP7/JUKQGEFiBIkRJEaQGEFiBIlZfwzPxtzOhd18jvlYQa7GfM+F3dyPuXNkxQgSI0iMIDGCxAgSI0iMIDGCxAgSI0iMIDHr4eL5mKe5sJu3Ob7LinFkxQgSI0iMIDGCxAgSI0iMIDGCxAgSI0iMIDGCxAgSI0iMIDGCxAgSs17hXox5nQu7eRnz7AZVhxtURYLECBIjSIwgMYLECBIjSIwgMYLECBIjSMx6uHg65mYu7OZrjhtUMY6sGEFiBIkRJEaQGEFiBIkRJEaQGEFiBIkRJEaQGEFiBIkRJEaQmPXG8GTM9VzYzc+YXxd2OlzYKRIkRpAYQWIEiREkRpAYQWIEiREkRpAYQWLWw8XLMe9zYTcPYx5d2IlxZMUIEiNIjCAxgsQIEiNIjCAph8MfxVg5lQYPgIkAAAAASUVORK5CYII=" class="nav__icon">
+        </a>
+    
+        <a href="#" class="nav__close">
+            <img src="data:image/png;base64,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" class="nav__icon">
+        </a>
+    
+    </nav>
+</section>
+
+
+
+<section class="bgxd">
+    <div class="circles">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    </div>
+</section>
+
+
+
+<section class="seccion1">
+
+
+    <section class="bio">
+        <div id="bio" class="hidden float typing-container">
+            <div class="pfp">
+            </div>
+            
+                <h1>Hi! I'm <span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
+                <p><br>
+                   Introducing CrisKop, is a 16 year old boy who likes programming, rythm games, and much more.<br><br>
+                    Since like i had nine years i started liking some things related to software, two years later, i started coding my first program, having me now with a lot of knowledge since then
+                </p>
+              </div>
+            
+              <script>
+                const typedTextSpan = document.querySelector(".typed-text");
+            const cursorSpan = document.querySelector(".cursor");
+            
+            const textArray = ["CrisKop"];
+            const typingDelay = 200;
+            const erasingDelay = 100;
+            const newTextDelay = 2000; // Delay between current and next text
+            let textArrayIndex = 0;
+            let charIndex = 0;
+            
+            function type() {
+              if (charIndex < textArray[textArrayIndex].length) {
+                if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingDelay);
+              } 
+              else {
+                cursorSpan.classList.remove("typing");
+                  setTimeout(erase, newTextDelay);
+              }
+            }
+            
+            function erase() {
+                if (charIndex > 0) {
+                if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+                charIndex--;
+                setTimeout(erase, erasingDelay);
+              } 
+              else {
+                cursorSpan.classList.remove("typing");
+                textArrayIndex++;
+                if(textArrayIndex>=textArray.length) textArrayIndex=0;
+                setTimeout(type, typingDelay + 1100);
+              }
+            }
+            
+            document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+              if(textArray.length) setTimeout(type, newTextDelay + 250);
+            });</script> <!--TYPING EFFECT-->
+    </section>
+
+    <section id="redes" class="redes">
+      <div id="yt" class="yt panel float hidden" onclick="window.open('https://www.youtube.com/criskopv/','mywindow')">
+        <div class="ytlogo"></div>
+        <div class="name"><a>@CrisKopv</a></div>
+      </div>
+
+      <div id="dc" onmouseout="outFunc()" onclick="copydc()" class="tooltip dc panel float hidden">
+        <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+        <div class="dclogo"></div>
+        <div class="name"><a>CrisElKopo#6731</a></div>
+      </div>
+
+      <div id="ig" class="ig panel float hidden" onclick="window.open('https://www.instagram.com/gold_cris__/','mywindow')">
+        <div class="iglogo"></div>
+        <div class="name"><a>@gold_cris__</a></div>
+      </div>
+
+      <div id="tw" class="tw panel float hidden" onclick="window.open('https://twitter.com/KopCris','mywindow')">
+        <div class="twlogo"></div>
+        <div class="name"><a>@KopCris</a></div>
+      </div>
+    </section>
+
+    <a href="#projects">
+    <section class="flechas">
+    <p id="f0" class="float hidden">GO DOWN</p>
+    <img id="f1" class="float hidden" src="./arrowdown.svg"></svg>
+    <img id="f2" class="float hidden" src="./arrowdown.svg"></svg>
+    <img id="f3" class="float hidden" src="./arrowdown.svg"></svg>
+    </section>
+  </a>
+
+  </section><!--Fin seccion 1-->
+
+  <section id="projects" class="seccion seccion2">
+
+    <section class="parts">
+
+      <div class="part1">
+        <h1 class="main-title">Mi libro</h1>
+        <div class="containerbook">
+          <div class="book">
+            <div class="front">
+              <div class="cover">
+                      
+              </div>
+            </div>
+            <div class="left-side">
+              <h2>
+                <span>Cristian Prince</span>
+                <span>2023</span>
+              </h2>
+            </div>
+
+            <div class="back">
+              <div class="cover2">
+                      
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button onclick="window.open('https://quesodash.fun/', '_blank')" type="button">Leer fragmento</button>
+          <button class="compra" onclick="window.open('https://discord.gg/ET4NYW6VHS', '_blank')" type="button">Comprar!</button>
+        </div>
+      </div>
+
+
+    <div class="part2">
+      <div class="containers">
+        <h2 class="main-title">Queso Dash Page</h2>
+        <div class="content">
+          <div class="image">
+            <img src="qd.png" alt="">
+          </div>
+          <div class="text-box">
+            <h3>QDPage</h3>
+            <p>Pagina personalizada y tematizada en Queso Dash</p>
+          </div>
+        </div>
+        <div class="buttons">
+        <button onclick="window.open('https://quesodash.fun/', '_blank')" type="button">Ir a la página!</button>
+        <button onclick="window.open('https://discord.gg/ET4NYW6VHS', '_blank')" type="button">Queso Dash Discord</button>
+      </div>
+      </div>
+    </div>
+
+  
+
+    </section>
+
+  </section>
+
+</body>
+</html>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+    
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 500, function(){
+       
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      ScrollReveal({
+        reset: true,
+        distance: '60px',
+        duration: 1500,
+        delay: 0
+      })
+    
+      ScrollReveal().reveal('.seccion', {origin: 'top'})
+    
+      gsap.registerPlugin(ScrollTrigger);
+    
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+      })
+    
+      function raf(time) {
+          lenis.raf(time)
+          requestAnimationFrame(raf)
+      }
+    
+      requestAnimationFrame(raf)
+    
+      
+    </script>
